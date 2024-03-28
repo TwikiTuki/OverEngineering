@@ -11,6 +11,7 @@
 
 :noremap <c- > :LspDocumentDiagnostics
 inoremap jj <ESC> 
+au BufNewFile,BufRead *.tpp filetype=cpp
 
 "LSP
 call plug#begin()
