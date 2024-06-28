@@ -27,18 +27,23 @@ setOptions(){
 		case ${opt} in
 			v)
 				echo "Option v with value ${OPTARG}"
+				HOST_VOLUME=${OPTARG}
 				;;
 			n)
 				echo "Option n with value ${OPTARG}"
+				DOCK_NAME=${OPTARG}
 				;;
 			f)
 				echo "Option f with value ${OPTARG}"
+				DOCKER_FILE=${OPTARG}
 				;;
 			:)
 				echo "Option ${OPTARG} without value "
+				exit 1
 				;;
 			?)
 				echo "Invalid option"
+				exit 1
 				;;
 	esac
 	done
