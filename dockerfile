@@ -7,6 +7,7 @@ RUN apt install -y curl
 RUN apt install -y clangd
 RUN apt install -y g++
 RUN apt install -y make
+RUN apt install -y git
 COPY ./root /root/
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 RUN  vim  -c ':PlugInstall | quita' 
